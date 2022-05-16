@@ -223,7 +223,7 @@ data = {
 }],
 "is_tool_script": false,
 "nodes": [0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
-"scroll": Vector2(624.386, 164.162),
+"scroll": Vector2(434.73, 91.082),
 "sequence_connections": [0, 0, 2, 2, 0, 4, 4, 0, 5, 5, 0, 7, 7, 0, 8],
 "signals": [],
 "variables": []
@@ -267,6 +267,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58642, 0.454749, 5.64117)
 
 [node name="Virus" parent="Agents" instance=ExtResource( "2_sxp07" )]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52506, 0.454749, 0.174756)
+
+[node name="Lympho3" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.45119, 0.454749, 2.73431)
+
+[node name="Lympho4" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58642, 0.454749, 2.90522)
+
+[node name="Virus2" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52506, 0.454749, -2.56119)
+
+[node name="Lympho5" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245051, 0.454749, 5.47026)
+
+[node name="Lympho6" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79256, 0.454749, 5.64117)
+
+[node name="Virus3" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7312, 0.454749, 0.174756)
+
+[node name="Lympho7" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245051, 0.454749, 2.73431)
+
+[node name="Lympho8" parent="Agents" instance=ExtResource( "1_x8the" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79256, 0.454749, 2.90522)
+
+[node name="Virus4" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7312, 0.454749, -2.56119)
+
+[node name="Virus5" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69478, 0.454749, 0.174756)
+
+[node name="Virus6" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69478, 0.454749, -2.56119)
+
+[node name="Virus7" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.488635, 0.454749, 0.174756)
+
+[node name="Virus8" parent="Agents" instance=ExtResource( "2_sxp07" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.488635, 0.454749, -2.56119)
 
 [node name="Behaviours" type="Node" parent="."]
 script = ExtResource( "1_0tlmj" )
