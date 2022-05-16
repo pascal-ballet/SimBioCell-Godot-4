@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="SimCells"
-run/main_scene="res://ScMain.tscn"
+run/main_scene="res://SimBioCell/SceneExamples/PetriDish/PetriDish.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://batgsx1sc67cb"]
+[gd_scene load_steps=28 format=3 uid="uid://boft5ah565n0n"]
 
-[ext_resource type="Script" path="res://Behaviours.gd" id="1_0tlmj"]
-[ext_resource type="PackedScene" path="res://SimBioCell/PreFabAgents/Virus.tscn" id="1_saj8u"]
-[ext_resource type="PackedScene" path="res://SimBioCell/PreFabAgents/Lympho.tscn" id="2_5ti0f"]
+[ext_resource type="Script" path="res://SimBioCell/ExpertMode/Engine/Behaviours.gd" id="1_0tlmj"]
+[ext_resource type="PackedScene" uid="uid://bvfcc7ieogp3r" path="res://SimBioCell/PreFabAgents/Virus.tscn" id="1_saj8u"]
+[ext_resource type="PackedScene" uid="uid://dco71qybua75a" path="res://SimBioCell/PreFabAgents/Lympho.tscn" id="2_5ti0f"]
 [ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/Reaction.gd" id="4_0e4ol"]
 [ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/DeathProba.gd" id="4_dufio"]
 [ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/ForceRndXZ.gd" id="5_6xkkr"]
@@ -60,14 +60,18 @@ data = {
 "variables": []
 }
 
-[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
-function = 56
-
 [sub_resource type="VisualScriptFunction" id="VisualScriptFunction_e5mux"]
 resource_name = "Start"
 argument_count = 1
 argument_1/type = 21
 argument_1/name = "arg1"
+
+[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
+function = 56
+
+[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
+_default_input_values = [0.0, -1.0]
+type = 3
 
 [sub_resource type="VisualScriptConstructor" id="VisualScriptConstructor_vvg5g"]
 _default_input_values = ["E Lowwwww"]
@@ -94,10 +98,6 @@ constructor = {
 "usage": 7
 }
 }
-
-[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
-_default_input_values = [0.0, -1.0]
-type = 3
 
 [sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_qinft"]
 _default_input_values = [null, &""]
@@ -222,7 +222,7 @@ data = {
 "name": &"Start"
 }],
 "is_tool_script": false,
-"nodes": [8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
+"nodes": [0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
 "scroll": Vector2(624.386, 164.162),
 "sequence_connections": [0, 0, 2, 2, 0, 4, 4, 0, 5, 5, 0, 7, 7, 0, 8],
 "signals": [],
