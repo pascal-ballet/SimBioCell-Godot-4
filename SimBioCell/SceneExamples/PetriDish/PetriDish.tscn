@@ -60,18 +60,14 @@ data = {
 "variables": []
 }
 
+[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
+function = 56
+
 [sub_resource type="VisualScriptFunction" id="VisualScriptFunction_e5mux"]
 resource_name = "Start"
 argument_count = 1
 argument_1/type = 21
 argument_1/name = "arg1"
-
-[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
-function = 56
-
-[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
-_default_input_values = [0.0, -1.0]
-type = 3
 
 [sub_resource type="VisualScriptConstructor" id="VisualScriptConstructor_vvg5g"]
 _default_input_values = ["E Lowwwww"]
@@ -98,6 +94,10 @@ constructor = {
 "usage": 7
 }
 }
+
+[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
+_default_input_values = [0.0, -1.0]
+type = 3
 
 [sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_qinft"]
 _default_input_values = [null, &""]
@@ -222,7 +222,7 @@ data = {
 "name": &"Start"
 }],
 "is_tool_script": false,
-"nodes": [0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
+"nodes": [8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
 "scroll": Vector2(434.73, 91.082),
 "sequence_connections": [0, 0, 2, 2, 0, 4, 4, 0, 5, 5, 0, 7, 7, 0, 8],
 "signals": [],
@@ -322,9 +322,9 @@ script = SubResource( "VisualScript_ict3g" )
 [node name="Mvt Brownien" type="Node" parent="Behaviours"]
 script = SubResource( "VisualScript_bumuq" )
 
-[node name="Node" type="Node" parent="."]
+[node name="Objects" type="Node" parent="."]
 
-[node name="PetriDish" parent="Node" instance=ExtResource( "7_hpqci" )]
+[node name="PetriDish" parent="Objects" instance=ExtResource( "7_hpqci" )]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 30)
