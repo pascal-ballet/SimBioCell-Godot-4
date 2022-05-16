@@ -1,12 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://boft5ah565n0n"]
+[gd_scene load_steps=26 format=3 uid="uid://dqpumpib00st"]
 
-[ext_resource type="Script" path="res://SimBioCell/ExpertMode/Engine/Behaviours.gd" id="1_0tlmj"]
-[ext_resource type="PackedScene" uid="uid://bvfcc7ieogp3r" path="res://SimBioCell/PreFabAgents/Virus.tscn" id="1_saj8u"]
-[ext_resource type="PackedScene" uid="uid://dco71qybua75a" path="res://SimBioCell/PreFabAgents/Lympho.tscn" id="2_5ti0f"]
-[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/Reaction.gd" id="4_0e4ol"]
-[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/DeathProba.gd" id="4_dufio"]
-[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/ForceRndXZ.gd" id="5_6xkkr"]
-[ext_resource type="PackedScene" uid="uid://cbpxd4mvlvmx3" path="res://SimBioCell/PreFabObjects/PetriDish.tscn" id="7_hpqci"]
+[ext_resource type="Script" path="res://SimBioCell/6-ExpertMode/Engine/Behaviours.gd" id="1_0tlmj"]
+[ext_resource type="Script" path="res://SimBioCell/4-PreFabBehaviors/Reaction.gd" id="4_0e4ol"]
+[ext_resource type="Script" path="res://SimBioCell/4-PreFabBehaviors/DeathProba.gd" id="4_dufio"]
+[ext_resource type="Script" path="res://SimBioCell/4-PreFabBehaviors/ForceRndXZ.gd" id="5_6xkkr"]
+[ext_resource type="PackedScene" uid="uid://cbpxd4mvlvmx3" path="res://SimBioCell/1-PreFabObjects/PetriDish.tscn" id="7_hpqci"]
 
 [sub_resource type="VisualScriptFunction" id="VisualScriptFunction_gm4dm"]
 resource_name = "Start"
@@ -60,18 +58,14 @@ data = {
 "variables": []
 }
 
+[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
+function = 56
+
 [sub_resource type="VisualScriptFunction" id="VisualScriptFunction_e5mux"]
 resource_name = "Start"
 argument_count = 1
 argument_1/type = 21
 argument_1/name = "arg1"
-
-[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
-function = 56
-
-[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
-_default_input_values = [0.0, -1.0]
-type = 3
 
 [sub_resource type="VisualScriptConstructor" id="VisualScriptConstructor_vvg5g"]
 _default_input_values = ["E Lowwwww"]
@@ -98,6 +92,10 @@ constructor = {
 "usage": 7
 }
 }
+
+[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
+_default_input_values = [0.0, -1.0]
+type = 3
 
 [sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_qinft"]
 _default_input_values = [null, &""]
@@ -222,7 +220,7 @@ data = {
 "name": &"Start"
 }],
 "is_tool_script": false,
-"nodes": [0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
+"nodes": [8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
 "scroll": Vector2(624.386, 164.162),
 "sequence_connections": [0, 0, 2, 2, 0, 4, 4, 0, 5, 5, 0, 7, 7, 0, 8],
 "signals": [],
@@ -258,48 +256,6 @@ data = {
 [node name="SimCells" type="Node3D"]
 
 [node name="Agents" type="Node" parent="."]
-
-[node name="Virus41" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07829, 0, -2.23368)
-
-[node name="Virus42" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.304103, 0, -2.23368)
-
-[node name="Virus43" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(0.999987, 0.0051836, 0, -0.0051836, 0.999987, 0, 0, 0, 1, 1.07829, 0, -2.7799)
-
-[node name="Virus44" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.286343, 0, -2.74629)
-
-[node name="Virus46" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77603, 0, -2.23368)
-
-[node name="Virus47" parent="Agents" instance=ExtResource( "1_saj8u" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77603, 0, -5.56356)
-
-[node name="Lympho" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04279, 0, -4.08373)
-
-[node name="Lympho2" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04279, 0, -0.923219)
-
-[node name="Lympho3" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80641, 0, -5.52875)
-
-[node name="Lympho4" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80641, 0, -2.36824)
-
-[node name="Lympho5" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08091, 0, -4.08373)
-
-[node name="Lympho6" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08091, 0, -0.923219)
-
-[node name="Lympho7" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31727, 0, -5.52875)
-
-[node name="Lympho8" parent="Agents" instance=ExtResource( "2_5ti0f" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31727, 0, -2.36824)
 
 [node name="Behaviours" type="Node" parent="."]
 script = ExtResource( "1_0tlmj" )
