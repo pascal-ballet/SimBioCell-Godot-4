@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvfcc7ieogp3r"]
+
+[ext_resource type="Shader" uid="uid://cc555mfvn17ya" path="res://SimBioCell/Materials/Red.tres" id="1_5dxsa"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_anh3t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbu1s"]
+render_priority = 0
+shader = ExtResource( "1_5dxsa" )
+
+[sub_resource type="SphereMesh" id="SphereMesh_7blyd"]
+
+[node name="Virus" type="RigidDynamicBody3D" groups=["Bouge", "Virus"]]
+axis_lock_linear_y = true
+contacts_reported = 1
+contact_monitor = true
+metadata/E = 1000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource( "SphereShape3D_anh3t" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource( "ShaderMaterial_hbu1s" )
+mesh = SubResource( "SphereMesh_7blyd" )

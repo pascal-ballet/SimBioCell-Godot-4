@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dco71qybua75a"]
+
+[ext_resource type="Shader" uid="uid://cdwbrusicprd2" path="res://SimBioCell/Materials/Green.tres" id="1_qkchq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vaa3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_825ga"]
+render_priority = 0
+shader = ExtResource( "1_qkchq" )
+
+[sub_resource type="SphereMesh" id="SphereMesh_7blyd"]
+
+[node name="Lympho" type="RigidDynamicBody3D" groups=["Bouge", "Lympho"]]
+axis_lock_linear_y = true
+contacts_reported = 1
+contact_monitor = true
+metadata/E = 1000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource( "SphereShape3D_vaa3h" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource( "ShaderMaterial_825ga" )
+mesh = SubResource( "SphereMesh_7blyd" )

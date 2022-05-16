@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmdbc4framklj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vaa3h"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7blyd"]
+
+[node name="Virus" type="RigidDynamicBody3D" groups=["Virus"]]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+contacts_reported = 1
+contact_monitor = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource( "SphereShape3D_vaa3h" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource( "SphereMesh_7blyd" )

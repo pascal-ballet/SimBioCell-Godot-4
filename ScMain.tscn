@@ -1,0 +1,327 @@
+[gd_scene load_steps=28 format=3 uid="uid://batgsx1sc67cb"]
+
+[ext_resource type="Script" path="res://Behaviours.gd" id="1_0tlmj"]
+[ext_resource type="PackedScene" path="res://SimBioCell/PreFabAgents/Virus.tscn" id="1_saj8u"]
+[ext_resource type="PackedScene" path="res://SimBioCell/PreFabAgents/Lympho.tscn" id="2_5ti0f"]
+[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/Reaction.gd" id="4_0e4ol"]
+[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/DeathProba.gd" id="4_dufio"]
+[ext_resource type="Script" path="res://SimBioCell/PreFabBehaviors/ForceRndXZ.gd" id="5_6xkkr"]
+[ext_resource type="PackedScene" uid="uid://cbpxd4mvlvmx3" path="res://SimBioCell/PreFabObjects/PetriDish.tscn" id="7_hpqci"]
+
+[sub_resource type="VisualScriptFunction" id="VisualScriptFunction_gm4dm"]
+resource_name = "Start"
+argument_count = 1
+argument_1/type = 21
+argument_1/name = "arg1"
+
+[sub_resource type="VisualScriptCustomNode" id="VisualScriptCustomNode_vb0wp"]
+_default_input_values = [null, "Virus", 0.0]
+script = ExtResource( "4_dufio" )
+
+[sub_resource type="VisualScript" id="VisualScript_m8dtl"]
+data = {
+"base_type": &"Node",
+"data_connections": [0, 0, 1, 0],
+"functions": [{
+"function_id": 0,
+"name": &"Start"
+}],
+"is_tool_script": false,
+"nodes": [0, Vector2(270, 250), SubResource( "VisualScriptFunction_gm4dm" ), 1, Vector2(434.286, 251.429), SubResource( "VisualScriptCustomNode_vb0wp" )],
+"scroll": Vector2(0, -29.7143),
+"sequence_connections": [0, 0, 1],
+"signals": [],
+"variables": []
+}
+
+[sub_resource type="VisualScriptFunction" id="VisualScriptFunction_i8bk1"]
+resource_name = "Start"
+argument_count = 1
+argument_1/type = 0
+argument_1/name = "Agent"
+
+[sub_resource type="VisualScriptCustomNode" id="VisualScriptCustomNode_smotf"]
+_default_input_values = [null, "Lympho", "Virus", "R1", "0"]
+script = ExtResource( "4_0e4ol" )
+
+[sub_resource type="VisualScript" id="VisualScript_r3nmp"]
+data = {
+"base_type": &"Node",
+"data_connections": [0, 0, 1, 0],
+"functions": [{
+"function_id": 0,
+"name": &"Start"
+}],
+"is_tool_script": false,
+"nodes": [0, Vector2(137.143, 274.286), SubResource( "VisualScriptFunction_i8bk1" ), 1, Vector2(377.143, 274.286), SubResource( "VisualScriptCustomNode_smotf" )],
+"scroll": Vector2(-2.28571, -29.7143),
+"sequence_connections": [0, 0, 1],
+"signals": [],
+"variables": []
+}
+
+[sub_resource type="VisualScriptBuiltinFunc" id="VisualScriptBuiltinFunc_vrnef"]
+function = 56
+
+[sub_resource type="VisualScriptFunction" id="VisualScriptFunction_e5mux"]
+resource_name = "Start"
+argument_count = 1
+argument_1/type = 21
+argument_1/name = "arg1"
+
+[sub_resource type="VisualScriptConstructor" id="VisualScriptConstructor_vvg5g"]
+_default_input_values = ["E Lowwwww"]
+type = 4
+constructor = {
+"args": [{
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "from",
+"type": 4,
+"usage": 7
+}],
+"default_args": [],
+"flags": 1,
+"id": 0,
+"name": "String",
+"return": {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 4,
+"usage": 7
+}
+}
+
+[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_7q4hs"]
+_default_input_values = [0.0, -1.0]
+type = 3
+
+[sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_qinft"]
+_default_input_values = [null, &""]
+call_mode = 2
+base_type = &"Node"
+base_script = ""
+argument_cache = {
+"args": [{
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "name",
+"type": 18,
+"usage": 7
+}, {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "default",
+"type": 0,
+"usage": 524295
+}],
+"default_args": [],
+"flags": 9,
+"id": 0,
+"name": "",
+"return": {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 0,
+"usage": 524295
+}
+}
+function = &"get_meta"
+use_default_args = 1
+
+[sub_resource type="VisualScriptConstructor" id="VisualScriptConstructor_jbwhu"]
+_default_input_values = ["E"]
+type = 4
+constructor = {
+"args": [{
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "from",
+"type": 4,
+"usage": 7
+}],
+"default_args": [],
+"flags": 1,
+"id": 0,
+"name": "String",
+"return": {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 4,
+"usage": 7
+}
+}
+
+[sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_6yryv"]
+_default_input_values = [null, &"", null]
+call_mode = 2
+base_type = &"Node"
+base_script = ""
+argument_cache = {
+"args": [{
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "name",
+"type": 18,
+"usage": 7
+}, {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "value",
+"type": 0,
+"usage": 524295
+}],
+"default_args": [],
+"flags": 1,
+"id": 0,
+"name": "",
+"return": {
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"name": "",
+"type": 0,
+"usage": 7
+}
+}
+function = &"set_meta"
+
+[sub_resource type="VisualScriptCondition" id="VisualScriptCondition_sfp5p"]
+_default_input_values = [false]
+
+[sub_resource type="VisualScriptOperator" id="VisualScriptOperator_lwdpp"]
+_default_input_values = [0.0, -1000.0]
+operator = 3
+type = 3
+
+[sub_resource type="VisualScriptFunctionCall" id="VisualScriptFunctionCall_rx45u"]
+_default_input_values = [null]
+call_mode = 2
+base_type = &"Node"
+base_script = "res://ScMain.tscn::VisualScript_ict3g"
+function = &"queue_free"
+
+[sub_resource type="VisualScript" id="VisualScript_ict3g"]
+data = {
+"base_type": &"Node",
+"data_connections": [2, 1, 1, 0, 0, 0, 2, 0, 2, 0, 4, 0, 6, 0, 5, 0, 1, 0, 6, 0, 4, 0, 7, 0, 9, 0, 8, 0, 3, 0, 2, 1, 3, 0, 4, 1, 1, 0, 4, 2],
+"functions": [{
+"function_id": 0,
+"name": &"Start"
+}],
+"is_tool_script": false,
+"nodes": [8, Vector2(1520, 342.857), SubResource( "VisualScriptBuiltinFunc_vrnef" ), 0, Vector2(34.2857, 342.857), SubResource( "VisualScriptFunction_e5mux" ), 9, Vector2(1380, 500), SubResource( "VisualScriptConstructor_vvg5g" ), 1, Vector2(605.714, 514.286), SubResource( "VisualScriptOperator_7q4hs" ), 2, Vector2(400, 342.857), SubResource( "VisualScriptFunctionCall_qinft" ), 3, Vector2(148.571, 457.143), SubResource( "VisualScriptConstructor_jbwhu" ), 4, Vector2(788.571, 342.857), SubResource( "VisualScriptFunctionCall_6yryv" ), 5, Vector2(1120, 468.571), SubResource( "VisualScriptCondition_sfp5p" ), 6, Vector2(857.143, 548.571), SubResource( "VisualScriptOperator_lwdpp" ), 7, Vector2(1291.43, 342.857), SubResource( "VisualScriptFunctionCall_rx45u" )],
+"scroll": Vector2(624.386, 164.162),
+"sequence_connections": [0, 0, 2, 2, 0, 4, 4, 0, 5, 5, 0, 7, 7, 0, 8],
+"signals": [],
+"variables": []
+}
+
+[sub_resource type="VisualScriptFunction" id="VisualScriptFunction_ga5q0"]
+resource_name = "Start"
+argument_count = 1
+argument_1/type = 21
+argument_1/name = "Agent"
+
+[sub_resource type="VisualScriptCustomNode" id="VisualScriptCustomNode_anvyw"]
+_default_input_values = [null, "Bouge", 1.0]
+script = ExtResource( "5_6xkkr" )
+
+[sub_resource type="VisualScript" id="VisualScript_bumuq"]
+data = {
+"base_type": &"Node",
+"data_connections": [0, 0, 1, 0],
+"functions": [{
+"function_id": 0,
+"name": &"Start"
+}],
+"is_tool_script": false,
+"nodes": [0, Vector2(70, 170), SubResource( "VisualScriptFunction_ga5q0" ), 1, Vector2(250, 170), SubResource( "VisualScriptCustomNode_anvyw" )],
+"scroll": Vector2(-40.7891, 46.227),
+"sequence_connections": [0, 0, 1],
+"signals": [],
+"variables": []
+}
+
+[node name="SimCells" type="Node3D"]
+
+[node name="Agents" type="Node" parent="."]
+
+[node name="Virus41" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07829, 0, -2.23368)
+
+[node name="Virus42" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.304103, 0, -2.23368)
+
+[node name="Virus43" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(0.999987, 0.0051836, 0, -0.0051836, 0.999987, 0, 0, 0, 1, 1.07829, 0, -2.7799)
+
+[node name="Virus44" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.286343, 0, -2.74629)
+
+[node name="Virus46" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77603, 0, -2.23368)
+
+[node name="Virus47" parent="Agents" instance=ExtResource( "1_saj8u" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77603, 0, -5.56356)
+
+[node name="Lympho" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04279, 0, -4.08373)
+
+[node name="Lympho2" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04279, 0, -0.923219)
+
+[node name="Lympho3" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80641, 0, -5.52875)
+
+[node name="Lympho4" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80641, 0, -2.36824)
+
+[node name="Lympho5" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08091, 0, -4.08373)
+
+[node name="Lympho6" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08091, 0, -0.923219)
+
+[node name="Lympho7" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31727, 0, -5.52875)
+
+[node name="Lympho8" parent="Agents" instance=ExtResource( "2_5ti0f" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31727, 0, -2.36824)
+
+[node name="Behaviours" type="Node" parent="."]
+script = ExtResource( "1_0tlmj" )
+
+[node name="Virus death p=2" type="Node" parent="Behaviours"]
+script = SubResource( "VisualScript_m8dtl" )
+
+[node name="Lympho+Virus=>Lympho" type="Node" parent="Behaviours"]
+script = SubResource( "VisualScript_r3nmp" )
+
+[node name="Virus E--" type="Node" parent="Behaviours"]
+script = SubResource( "VisualScript_ict3g" )
+
+[node name="Mvt Brownien" type="Node" parent="Behaviours"]
+script = SubResource( "VisualScript_bumuq" )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="PetriDish" parent="Node" instance=ExtResource( "7_hpqci" )]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 30, 30)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 40, 40)

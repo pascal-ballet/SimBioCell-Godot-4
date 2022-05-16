@@ -1,0 +1,28 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://c3pei7vwxbef1"]
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_tlhc0"]
+constant = Color(1, 0, 0.0875635, 1)
+
+[resource]
+code = "shader_type spatial;
+
+
+
+void fragment() {
+// ColorConstant:2
+	vec4 n_out2p0 = vec4(1.000000, 0.000000, 0.087563, 1.000000);
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+
+
+}
+"
+engine_version = {
+"major": 4,
+"minor": 0
+}
+nodes/fragment/2/node = SubResource( "VisualShaderNodeColorConstant_tlhc0" )
+nodes/fragment/2/position = Vector2(40, 160)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)
