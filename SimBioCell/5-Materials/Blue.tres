@@ -1,7 +1,8 @@
-[gd_resource type="VisualShader" load_steps=2 format=3]
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://dtcq7f0wm4hyn"]
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_tlhc0"]
-constant = Color(1, 0, 0.0875635, 1)
+expanded_output_ports = [0]
+constant = Color(0, 0, 1, 1)
 
 [resource]
 code = "shader_type spatial;
@@ -10,7 +11,7 @@ code = "shader_type spatial;
 
 void fragment() {
 // ColorConstant:2
-	vec4 n_out2p0 = vec4(1.000000, 0.000000, 0.087563, 1.000000);
+	vec4 n_out2p0 = vec4(0.000000, 0.000000, 1.000000, 1.000000);
 
 
 // Output:0

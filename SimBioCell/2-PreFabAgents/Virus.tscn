@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvfcc7ieogp3r"]
 
-[ext_resource type="Shader" uid="uid://cc555mfvn17ya" path="res://SimBioCell/Materials/Red.tres" id="1_5dxsa"]
+[ext_resource type="Shader" uid="uid://cc555mfvn17ya" path="res://SimBioCell/5-Materials/Red.tres" id="1_5dxsa"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_anh3t"]
 

@@ -1,6 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmdbc4framklj"]
+[gd_scene load_steps=5 format=3 uid="uid://cjal3teecqqe5"]
+
+[ext_resource type="Shader" uid="uid://jvjw0dh6l31j" path="res://SimBioCell/5-Materials/Red.tres" id="1_bxt6v"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vaa3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eeu38"]
+render_priority = 0
+shader = ExtResource( "1_bxt6v" )
 
 [sub_resource type="SphereMesh" id="SphereMesh_7blyd"]
 
@@ -15,4 +21,5 @@ contact_monitor = true
 shape = SubResource( "SphereShape3D_vaa3h" )
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource( "ShaderMaterial_eeu38" )
 mesh = SubResource( "SphereMesh_7blyd" )
