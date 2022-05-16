@@ -7,7 +7,7 @@ func _get_caption():
 func _get_category():
 	return "SimCells"
 
-# *****************************************************
+# *************
 # *   STEP    *
 # *************
 func _step(inputs, outputs, start_mode, working_mem):
@@ -22,7 +22,7 @@ func _step(inputs, outputs, start_mode, working_mem):
 	outputs[0] = made # in the box, return true if the death has been made, else it returns false
 	return 0
 
-# *****************************************************
+# **************
 # *  SEQUENCE  *
 # **************
 func _has_input_sequence_port():
@@ -30,9 +30,9 @@ func _has_input_sequence_port():
 func _get_output_sequence_port_count():
 	return 1
 
-# *****************************************************
+# ************
 # *  INPUT   *
-# *************
+# ************
 func _get_input_value_port_count():
 	return 3
 func _get_input_value_port_name(idx):
@@ -52,7 +52,7 @@ func _get_input_value_port_type(idx):
 		return TYPE_FLOAT
 	return TYPE_OBJECT
 
-# *****************************************************
+# *************
 # *  OUTPUT   *
 # *************
 func _get_output_value_port_count():
